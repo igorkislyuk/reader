@@ -7,11 +7,15 @@
 //
 
 import WatchKit
+import WatchConnectivity
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
+    var session: WCSession?
+
     func applicationDidFinishLaunching() {
-        // Perform any final initialization of your application.
+
+        setupWatchConnectivity()
     }
 
     func applicationDidBecomeActive() {
@@ -46,5 +50,92 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
             }
         }
     }
+
+    func setupWatchConnectivity() {
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+
+            if session.isReachable {
+                let message = ["foo":"bar"]
+                session.sendMessage(message, replyHandler: nil, errorHandler: { (error) -> Void in
+                    print("send failed with error \(error)")
+                })
+            }
+
+            self.session = session
+        }
+    }
+
+}
+
+extension ExtensionDelegate: WCSessionDelegate {
+
+    func session(_ session: WCSession,
+                 activationDidCompleteWith activationState: WCSessionActivationState,
+                 error: Error?) {
+
+        if let error = error {
+            print("WC Session activation failed with error: " + "\(error.localizedDescription)")
+            return
+        }
+
+        print("WC Session activated with state: " + "\(activationState)")
+    }
+
+    func session(_ session: WCSession,
+                 didReceiveMessageData messageData: Data,
+                 replyHandler: @escaping (Data) -> Swift.Void) {
+
+        debugPrint(#function)
+
+        if let string = String(data: messageData, encoding: .utf8) {
+            StorageService.shared.strings = [string]
+            // to main queue
+            DispatchQueue.main.async {
+                WKInterfaceController.reloadRootPageControllers(withNames: ["RootController"], contexts: nil, orientation: .horizontal, pageIndex: 0)
+            }
+        }
+    }
+
+//    func sessionReachabilityDidChange(_ session: WCSession) {
+//        debugPrint(#function)
+//    }
+//
+//    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+//        debugPrint(#function)
+//    }
+//
+//    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Swift.Void) {
+//        debugPrint(#function)
+//    }
+//
+    func session(_ session: WCSession, didReceiveMessageData messageData: Data) {
+        debugPrint(#function)
+        // convert to string
+
+        
+    }
+//
+//    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+//        debugPrint(#function)
+//    }
+//
+//    func session(_ session: WCSession, didFinish userInfoTransfer: WCSessionUserInfoTransfer, error: Error?) {
+//        debugPrint(#function)
+//    }
+//
+//    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+//        debugPrint(#function)
+//    }
+//
+//    func session(_ session: WCSession, didFinish fileTransfer: WCSessionFileTransfer, error: Error?) {
+//        debugPrint(#function)
+//    }
+//
+//    func session(_ session: WCSession, didReceive file: WCSessionFile) {
+//        debugPrint(#function)
+//    }
 
 }

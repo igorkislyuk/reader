@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A64E1A5C20B85EA9000539B5 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64E1A5B20B85EA9000539B5 /* StorageService.swift */; };
 		A652396120A78A7800DE6F62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A652396020A78A7800DE6F62 /* AppDelegate.swift */; };
 		A652396320A78A7800DE6F62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A652396220A78A7800DE6F62 /* ViewController.swift */; };
 		A652396620A78A7800DE6F62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A652396420A78A7800DE6F62 /* Main.storyboard */; };
@@ -19,6 +20,9 @@
 		A652398420A78A7A00DE6F62 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A652398320A78A7A00DE6F62 /* InterfaceController.swift */; };
 		A652398620A78A7A00DE6F62 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A652398520A78A7A00DE6F62 /* ExtensionDelegate.swift */; };
 		A652398820A78A7A00DE6F62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A652398720A78A7A00DE6F62 /* Assets.xcassets */; };
+		A6BA31F120B2E8D900FBE03F /* TextRowContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BA31F020B2E8D900FBE03F /* TextRowContoller.swift */; };
+		A6BA31F220B2ED3500FBE03F /* HP.txt in Resources */ = {isa = PBXBuildFile; fileRef = A6BA31EE20B2E81000FBE03F /* HP.txt */; };
+		A6BA31F520B2EFD000FBE03F /* SynchronizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BA31F420B2EFD000FBE03F /* SynchronizationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A64E1A5B20B85EA9000539B5 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		A652395D20A78A7800DE6F62 /* Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A652396020A78A7800DE6F62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A652396220A78A7800DE6F62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +85,9 @@
 		A652398520A78A7A00DE6F62 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		A652398720A78A7A00DE6F62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A652398920A78A7A00DE6F62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6BA31EE20B2E81000FBE03F /* HP.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = HP.txt; sourceTree = "<group>"; };
+		A6BA31F020B2E8D900FBE03F /* TextRowContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRowContoller.swift; sourceTree = "<group>"; };
+		A6BA31F420B2EFD000FBE03F /* SynchronizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronizationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,7 @@
 		A652395420A78A7800DE6F62 = {
 			isa = PBXGroup;
 			children = (
+				A6BA31ED20B2E7FC00FBE03F /* Examples */,
 				A652395F20A78A7800DE6F62 /* Reader */,
 				A652397320A78A7900DE6F62 /* Reader WatchKit App */,
 				A652398220A78A7A00DE6F62 /* Reader WatchKit Extension */,
@@ -123,6 +132,7 @@
 		A652395F20A78A7800DE6F62 /* Reader */ = {
 			isa = PBXGroup;
 			children = (
+				A6BA31F320B2EFC300FBE03F /* Services */,
 				A652396020A78A7800DE6F62 /* AppDelegate.swift */,
 				A652396220A78A7800DE6F62 /* ViewController.swift */,
 				A652396420A78A7800DE6F62 /* Main.storyboard */,
@@ -150,8 +160,26 @@
 				A652398520A78A7A00DE6F62 /* ExtensionDelegate.swift */,
 				A652398720A78A7A00DE6F62 /* Assets.xcassets */,
 				A652398920A78A7A00DE6F62 /* Info.plist */,
+				A6BA31F020B2E8D900FBE03F /* TextRowContoller.swift */,
+				A64E1A5B20B85EA9000539B5 /* StorageService.swift */,
 			);
 			path = "Reader WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		A6BA31ED20B2E7FC00FBE03F /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				A6BA31EE20B2E81000FBE03F /* HP.txt */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		A6BA31F320B2EFC300FBE03F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A6BA31F420B2EFD000FBE03F /* SynchronizationService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6BA31F220B2ED3500FBE03F /* HP.txt in Resources */,
 				A652396B20A78A7900DE6F62 /* LaunchScreen.storyboard in Resources */,
 				A652396820A78A7900DE6F62 /* Assets.xcassets in Resources */,
 				A652396620A78A7800DE6F62 /* Main.storyboard in Resources */,
@@ -286,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6BA31F520B2EFD000FBE03F /* SynchronizationService.swift in Sources */,
 				A652396320A78A7800DE6F62 /* ViewController.swift in Sources */,
 				A652396120A78A7800DE6F62 /* AppDelegate.swift in Sources */,
 			);
@@ -296,7 +326,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A652398620A78A7A00DE6F62 /* ExtensionDelegate.swift in Sources */,
+				A64E1A5C20B85EA9000539B5 /* StorageService.swift in Sources */,
 				A652398420A78A7A00DE6F62 /* InterfaceController.swift in Sources */,
+				A6BA31F120B2E8D900FBE03F /* TextRowContoller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

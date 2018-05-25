@@ -1,25 +1,46 @@
-//
-//  ViewController.swift
-//  Reader
-//
-//  Created by Igor Kislyuk on 12/05/2018.
-//  Copyright © 2018 Igor Kislyuk. All rights reserved.
-//
-
 import UIKit
+import WatchConnectivity
 
 class ViewController: UIViewController {
 
+    @IBAction func action(_ sender: Any) {
+        guard let ext = (UIApplication.shared.delegate as? AppDelegate) else {
+            return
+        }
+
+        guard let session = ext.session else { return  }
+
+       sendFile(session: session)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        guard let session = (UIApplication.shared.delegate as? AppDelegate)?.session else {
+            debugPrint("No session")
+            return
+        }
+
+        sendFile(session: session)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func sendFile(session: WCSession) {
+        let manager = FileManager()
+
+        guard let path = Bundle.main.path(forResource: "HP", ofType: ".txt"), let data = manager.contents(atPath: path) else {
+            debugPrint("No data")
+            return
+        }
+
+        guard session.isWatchAppInstalled, session.isReachable, session.isPaired else {
+            debugPrint("Something went wrong")
+            return
+        }
+
+        session.sendMessageData(data, replyHandler: { (data) in
+            debugPrint("reply handler")
+        }, errorHandler: { (error) in
+            debugPrint(error.localizedDescription)
+        })
     }
-
-
 }
-
