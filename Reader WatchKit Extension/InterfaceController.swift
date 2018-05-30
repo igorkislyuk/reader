@@ -1,22 +1,13 @@
-//
-//  InterfaceController.swift
-//  Reader WatchKit Extension
-//
-//  Created by Igor Kislyuk on 12/05/2018.
-//  Copyright © 2018 Igor Kislyuk. All rights reserved.
-//
-
 import WatchKit
 import Foundation
 
-
-
-class InterfaceController: WKInterfaceController {
+final class InterfaceController: WKInterfaceController {
 
     @IBOutlet private weak var table: WKInterfaceTable!
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+
     }
     
     override func willActivate() {
