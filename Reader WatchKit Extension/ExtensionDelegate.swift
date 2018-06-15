@@ -16,6 +16,10 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
     func applicationDidFinishLaunching() {
 
         setupWatchConnectivity()
+
+        FileService.copyIfNeeded(file: "HP", fileExtension: "txt")
+
+
     }
 
     func applicationDidBecomeActive() {
@@ -93,9 +97,13 @@ extension ExtensionDelegate: WCSessionDelegate {
         if let string = String(data: messageData, encoding: .utf8) {
             StorageService.shared.strings = [string]
             // to main queue
-            DispatchQueue.main.async {
-                WKInterfaceController.reloadRootPageControllers(withNames: ["RootController"], contexts: nil, orientation: .horizontal, pageIndex: 0)
-            }
+
+        }
+    }
+
+    func reloadRootController() {
+        DispatchQueue.main.async {
+            WKInterfaceController.reloadRootPageControllers(withNames: ["RootController"], contexts: nil, orientation: .horizontal, pageIndex: 0)
         }
     }
 
@@ -134,8 +142,9 @@ extension ExtensionDelegate: WCSessionDelegate {
 //        debugPrint(#function)
 //    }
 //
-//    func session(_ session: WCSession, didReceive file: WCSessionFile) {
-//        debugPrint(#function)
-//    }
+    func session(_ session: WCSession, didReceive file: WCSessionFile) {
+        
+        debugPrint(#function)
+    }
 
 }

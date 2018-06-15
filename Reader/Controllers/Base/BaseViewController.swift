@@ -1,5 +1,8 @@
 import UIKit
-import LeadKit
+
+protocol BaseViewModel {
+    
+}
 
 class BaseViewController<ViewModel: BaseViewModel>: UIViewController {
 

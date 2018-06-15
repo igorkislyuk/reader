@@ -22,13 +22,13 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 
         debugPrint(#function)
 
         setupWatchConnectivity()
 
-        if let launchOptions = launchOptions, let url = launchOptions[UIApplicationLaunchOptionsKey.url] as? URL {
+        if let launchOptions = launchOptions, let url = launchOptions[UIApplication.LaunchOptionsKey.url] as? URL {
             saveFile(url: url)
         } else {
             debugPrint("No url to save file.")
@@ -39,9 +39,10 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+
     func application(_ app: UIApplication,
                      open url: URL,
-                     options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+                     options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
 
         saveFile(url: url)
 
@@ -102,4 +103,115 @@ extension AppDelegate: WCSessionDelegate {
 
         print(message)
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+public extension UIView {
+
+    /**
+     Place and fix view to parent view's center
+     - parameter size: desired view size, by default size is equal parent's size
+     */
+    func setToCenter(withSize size: CGSize? = nil) {
+        guard let parent = superview else {
+            return
+        }
+
+        translatesAutoresizingMaskIntoConstraints = false
+
+        guard let size = size else {
+            scaleToFill()
+            return
+        }
+
+        let constraints = [
+            centerXAnchor.constraint(equalTo: parent.centerXAnchor),
+            centerYAnchor.constraint(equalTo: parent.centerYAnchor),
+            heightAnchor.constraint(equalToConstant: size.height),
+            widthAnchor.constraint(equalToConstant: size.width)
+        ]
+
+        NSLayoutConstraint.activate(constraints)
+    }
+
+    /**
+     Place and fix view to parent view's center with insets
+     - parameter insets: desired view insets, by default is zero
+     - parameter edges: edges to which no constraints are needed
+     */
+    func pinToSuperview(with insets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0), excluding edges: UIRectEdge = []) {
+        guard let superview = superview else {
+            return
+        }
+
+        let topActive = !edges.contains(.top)
+        let leadingActive = !edges.contains(.left)
+        let bottomActive = !edges.contains(.bottom)
+        let trailingActive = !edges.contains(.right)
+
+        translatesAutoresizingMaskIntoConstraints = false
+
+        if #available(iOS 11, tvOS 11, *) {
+            topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor, constant: insets.top)
+                .isActive = topActive
+            leadingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leadingAnchor, constant: insets.left)
+                .isActive = leadingActive
+            bottomAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.bottomAnchor, constant: -insets.bottom)
+                .isActive = bottomActive
+            trailingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.trailingAnchor, constant: -insets.right)
+                .isActive = trailingActive
+        } else {
+            topAnchor.constraint(equalTo: superview.topAnchor, constant: insets.top).isActive = topActive
+            leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: insets.left).isActive = leadingActive
+            bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -insets.bottom).isActive = bottomActive
+            trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -insets.right).isActive = trailingActive
+        }
+    }
+
+    private func scaleToFill() {
+        guard let superview = superview else {
+            return
+        }
+
+        let constraints: [NSLayoutConstraint]
+        if #available(iOS 11, tvOS 11, *) {
+            constraints = [
+                topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor),
+                bottomAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.bottomAnchor),
+                leftAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leftAnchor),
+                rightAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.rightAnchor)
+            ]
+        } else {
+            constraints = [
+                topAnchor.constraint(equalTo: superview.topAnchor),
+                bottomAnchor.constraint(equalTo: superview.bottomAnchor),
+                leftAnchor.constraint(equalTo: superview.leftAnchor),
+                rightAnchor.constraint(equalTo: superview.rightAnchor)
+            ]
+        }
+
+        NSLayoutConstraint.activate(constraints)
+    }
+
+}
+
+extension String {
+
+    /**
+     Nil if empty representation
+     - returns: nil if string empty, self otherwise
+     */
+    var nilIfEmpty: String? {
+        return isEmpty ? nil : self
+    }
+
 }

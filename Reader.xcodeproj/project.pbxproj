@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4AE9B293AAD08E42D90226E3 /* Pods_Reader_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C50DBC04C9FA7D5A78ED2E4 /* Pods_Reader_WatchKit_Extension.framework */; };
-		765DB1D59109B3138BCF1FC0 /* Pods_Reader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5688909BF16B699FD1A79B49 /* Pods_Reader.framework */; };
 		A64E1A5C20B85EA9000539B5 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64E1A5B20B85EA9000539B5 /* StorageService.swift */; };
 		A652396120A78A7800DE6F62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A652396020A78A7800DE6F62 /* AppDelegate.swift */; };
 		A652396320A78A7800DE6F62 /* FilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A652396220A78A7800DE6F62 /* FilesViewController.swift */; };
@@ -21,6 +19,10 @@
 		A652398420A78A7A00DE6F62 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A652398320A78A7A00DE6F62 /* InterfaceController.swift */; };
 		A652398620A78A7A00DE6F62 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A652398520A78A7A00DE6F62 /* ExtensionDelegate.swift */; };
 		A652398820A78A7A00DE6F62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A652398720A78A7A00DE6F62 /* Assets.xcassets */; };
+		A659930420D340D2002C7C43 /* InitializableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659930320D340D2002C7C43 /* InitializableView.swift */; };
+		A659930620D343D4002C7C43 /* ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659930520D343D4002C7C43 /* ReuseIdentifiable.swift */; };
+		A659930720D348C1002C7C43 /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68D825520BE2B0800637660 /* FileService.swift */; };
+		A659930920D34A52002C7C43 /* HP.txt in Resources */ = {isa = PBXBuildFile; fileRef = A6BA31EE20B2E81000FBE03F /* HP.txt */; };
 		A68D824E20BE1AC000637660 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68D824D20BE1AC000637660 /* NavigationService.swift */; };
 		A68D825020BE1E3D00637660 /* FileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68D824F20BE1E3D00637660 /* FileCell.swift */; };
 		A68D825420BE1F1700637660 /* FileCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68D825320BE1F1700637660 /* FileCellViewModel.swift */; };
@@ -31,7 +33,6 @@
 		A6BA31F120B2E8D900FBE03F /* TextRowContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BA31F020B2E8D900FBE03F /* TextRowContoller.swift */; };
 		A6BA31F220B2ED3500FBE03F /* HP.txt in Resources */ = {isa = PBXBuildFile; fileRef = A6BA31EE20B2E81000FBE03F /* HP.txt */; };
 		A6BA31F520B2EFD000FBE03F /* SynchronizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BA31F420B2EFD000FBE03F /* SynchronizationService.swift */; };
-		D7876EB9026DE4D3D200BADB /* Pods_Reader_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6EE2D83759F9A4D3B18EF2 /* Pods_Reader_WatchKit_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,13 +78,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2C50DBC04C9FA7D5A78ED2E4 /* Pods_Reader_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reader_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BBC5EAB946BC22E17441155 /* Pods-Reader WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reader WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reader WatchKit Extension/Pods-Reader WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
-		55E9EE82A28028A7C25F79F1 /* Pods-Reader WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reader WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reader WatchKit App/Pods-Reader WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
-		5688909BF16B699FD1A79B49 /* Pods_Reader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		61E7445329D4200CD3569C96 /* Pods-Reader WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reader WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reader WatchKit App/Pods-Reader WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
-		70FB9A7F59FEF0E6B2C5977D /* Pods-Reader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reader.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reader/Pods-Reader.release.xcconfig"; sourceTree = "<group>"; };
-		A3427D76638B3E9F98CE3882 /* Pods-Reader WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reader WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reader WatchKit Extension/Pods-Reader WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		A64E1A5B20B85EA9000539B5 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		A652395D20A78A7800DE6F62 /* Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A652396020A78A7800DE6F62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +94,8 @@
 		A652398520A78A7A00DE6F62 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		A652398720A78A7A00DE6F62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A652398920A78A7A00DE6F62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A659930320D340D2002C7C43 /* InitializableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializableView.swift; sourceTree = "<group>"; };
+		A659930520D343D4002C7C43 /* ReuseIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiable.swift; sourceTree = "<group>"; };
 		A68D824D20BE1AC000637660 /* NavigationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
 		A68D824F20BE1E3D00637660 /* FileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCell.swift; sourceTree = "<group>"; };
 		A68D825320BE1F1700637660 /* FileCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCellViewModel.swift; sourceTree = "<group>"; };
@@ -110,8 +106,6 @@
 		A6BA31EE20B2E81000FBE03F /* HP.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = HP.txt; sourceTree = "<group>"; };
 		A6BA31F020B2E8D900FBE03F /* TextRowContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRowContoller.swift; sourceTree = "<group>"; };
 		A6BA31F420B2EFD000FBE03F /* SynchronizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronizationService.swift; sourceTree = "<group>"; };
-		D66381C665BC41B46D3631A3 /* Pods-Reader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reader/Pods-Reader.debug.xcconfig"; sourceTree = "<group>"; };
-		DF6EE2D83759F9A4D3B18EF2 /* Pods_Reader_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reader_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +113,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7876EB9026DE4D3D200BADB /* Pods_Reader_WatchKit_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +120,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				765DB1D59109B3138BCF1FC0 /* Pods_Reader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,36 +127,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AE9B293AAD08E42D90226E3 /* Pods_Reader_WatchKit_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		13B3CD83057694F2A701D472 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5688909BF16B699FD1A79B49 /* Pods_Reader.framework */,
-				DF6EE2D83759F9A4D3B18EF2 /* Pods_Reader_WatchKit_App.framework */,
-				2C50DBC04C9FA7D5A78ED2E4 /* Pods_Reader_WatchKit_Extension.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6FE3B6857215C1420D6F86EF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D66381C665BC41B46D3631A3 /* Pods-Reader.debug.xcconfig */,
-				70FB9A7F59FEF0E6B2C5977D /* Pods-Reader.release.xcconfig */,
-				55E9EE82A28028A7C25F79F1 /* Pods-Reader WatchKit App.debug.xcconfig */,
-				61E7445329D4200CD3569C96 /* Pods-Reader WatchKit App.release.xcconfig */,
-				A3427D76638B3E9F98CE3882 /* Pods-Reader WatchKit Extension.debug.xcconfig */,
-				3BBC5EAB946BC22E17441155 /* Pods-Reader WatchKit Extension.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		A652395420A78A7800DE6F62 = {
 			isa = PBXGroup;
 			children = (
@@ -173,8 +141,6 @@
 				A652397320A78A7900DE6F62 /* Reader WatchKit App */,
 				A652398220A78A7A00DE6F62 /* Reader WatchKit Extension */,
 				A652395E20A78A7800DE6F62 /* Products */,
-				6FE3B6857215C1420D6F86EF /* Pods */,
-				13B3CD83057694F2A701D472 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,6 +161,7 @@
 				A68D825220BE1E4600637660 /* Cells */,
 				A68D824A20BE19C100637660 /* Controllers */,
 				A68D824C20BE19D900637660 /* Interface */,
+				A659930220D340C8002C7C43 /* Protocols */,
 				A68D824B20BE19CB00637660 /* Resources */,
 				A6BA31F320B2EFC300FBE03F /* Services */,
 			);
@@ -222,6 +189,15 @@
 				A64E1A5B20B85EA9000539B5 /* StorageService.swift */,
 			);
 			path = "Reader WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		A659930220D340C8002C7C43 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A659930320D340D2002C7C43 /* InitializableView.swift */,
+				A659930520D343D4002C7C43 /* ReuseIdentifiable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		A68D824A20BE19C100637660 /* Controllers */ = {
@@ -310,12 +286,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A652399420A78A7A00DE6F62 /* Build configuration list for PBXNativeTarget "Reader" */;
 			buildPhases = (
-				3E2BD945CDD50715A650612A /* [CP] Check Pods Manifest.lock */,
 				A652395920A78A7800DE6F62 /* Sources */,
 				A652395A20A78A7800DE6F62 /* Frameworks */,
 				A652395B20A78A7800DE6F62 /* Resources */,
 				A652399320A78A7A00DE6F62 /* Embed Watch Content */,
-				E4FA4BAA799EC4C0AFB7879F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -331,7 +305,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A652399020A78A7A00DE6F62 /* Build configuration list for PBXNativeTarget "Reader WatchKit App" */;
 			buildPhases = (
-				45F1431FB5CBF8466153DB19 /* [CP] Check Pods Manifest.lock */,
 				A652396D20A78A7900DE6F62 /* Resources */,
 				A652398F20A78A7A00DE6F62 /* Embed App Extensions */,
 				0E76BA5F40EAC98CECD69CE2 /* Frameworks */,
@@ -350,7 +323,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A652398C20A78A7A00DE6F62 /* Build configuration list for PBXNativeTarget "Reader WatchKit Extension" */;
 			buildPhases = (
-				C1F987339AA36D55348F1B3B /* [CP] Check Pods Manifest.lock */,
 				A652397A20A78A7A00DE6F62 /* Sources */,
 				A652397B20A78A7A00DE6F62 /* Frameworks */,
 				A652397C20A78A7A00DE6F62 /* Resources */,
@@ -382,6 +354,7 @@
 					};
 					A652397D20A78A7A00DE6F62 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -429,102 +402,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A659930920D34A52002C7C43 /* HP.txt in Resources */,
 				A652398820A78A7A00DE6F62 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3E2BD945CDD50715A650612A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Reader-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		45F1431FB5CBF8466153DB19 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Reader WatchKit App-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C1F987339AA36D55348F1B3B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Reader WatchKit Extension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E4FA4BAA799EC4C0AFB7879F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Reader/Pods-Reader-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/LeadKit/LeadKit.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
-				"${BUILT_PRODUCTS_DIR}/TableKit/TableKit.framework",
-				"${BUILT_PRODUCTS_DIR}/UIScrollView-InfiniteScroll/UIScrollView_InfiniteScroll.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LeadKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TableKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIScrollView_InfiniteScroll.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Reader/Pods-Reader-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A652395920A78A7800DE6F62 /* Sources */ = {
@@ -540,6 +423,8 @@
 				A68D825B20BE330B00637660 /* BaseViewController.swift in Sources */,
 				A68D825020BE1E3D00637660 /* FileCell.swift in Sources */,
 				A68D825820BE32C900637660 /* FilesViewModel.swift in Sources */,
+				A659930420D340D2002C7C43 /* InitializableView.swift in Sources */,
+				A659930620D343D4002C7C43 /* ReuseIdentifiable.swift in Sources */,
 				A68D824E20BE1AC000637660 /* NavigationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +436,7 @@
 				A652398620A78A7A00DE6F62 /* ExtensionDelegate.swift in Sources */,
 				A64E1A5C20B85EA9000539B5 /* StorageService.swift in Sources */,
 				A652398420A78A7A00DE6F62 /* InterfaceController.swift in Sources */,
+				A659930720D348C1002C7C43 /* FileService.swift in Sources */,
 				A6BA31F120B2E8D900FBE03F /* TextRowContoller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -706,7 +592,6 @@
 		};
 		A652398D20A78A7A00DE6F62 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3427D76638B3E9F98CE3882 /* Pods-Reader WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Manual;
@@ -723,7 +608,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = ReaderDevelopment;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
@@ -731,7 +616,6 @@
 		};
 		A652398E20A78A7A00DE6F62 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BBC5EAB946BC22E17441155 /* Pods-Reader WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Manual;
@@ -748,7 +632,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = ReaderDevelopment;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
@@ -756,7 +640,6 @@
 		};
 		A652399120A78A7A00DE6F62 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55E9EE82A28028A7C25F79F1 /* Pods-Reader WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -778,7 +661,6 @@
 		};
 		A652399220A78A7A00DE6F62 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61E7445329D4200CD3569C96 /* Pods-Reader WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -800,7 +682,6 @@
 		};
 		A652399520A78A7A00DE6F62 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D66381C665BC41B46D3631A3 /* Pods-Reader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -815,14 +696,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "537c6a2a-53f6-40aa-8622-511bbbc86ab5";
 				PROVISIONING_PROFILE_SPECIFIER = ReaderDevelopment;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		A652399620A78A7A00DE6F62 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70FB9A7F59FEF0E6B2C5977D /* Pods-Reader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -837,7 +717,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "15a474c6-cd42-4ac2-ad29-6ebb7e64e272";
 				PROVISIONING_PROFILE_SPECIFIER = ReaderDevelopment;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

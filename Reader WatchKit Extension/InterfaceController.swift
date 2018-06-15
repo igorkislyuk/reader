@@ -9,15 +9,16 @@ final class InterfaceController: WKInterfaceController {
         super.awake(withContext: context)
 
     }
+
+    var files = FileService.allFiles()
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
 
+        table.setNumberOfRows(files.count, withRowType: "TextRowController")
 
-        table.setNumberOfRows(StorageService.shared.strings.count, withRowType: "TextRowController")
-
-        StorageService.shared.strings.enumerated().forEach { (index, string) in
+        files.enumerated().forEach { index, string in
             if let controller = table.rowController(at: index) as? TextRowController {
                 controller.textLabel?.setText(string)
             }

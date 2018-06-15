@@ -1,29 +1,23 @@
 import UIKit
 import WatchConnectivity
-import SnapKit
-import LeadKit
-import TableKit
 
-final class FilesViewController: BaseViewController<FilesViewModel> {
+final class FilesViewController: BaseViewController<FilesViewModel>, UITableViewDelegate, UITableViewDataSource {
 
     private(set) lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         self.view.addSubview(tableView)
         tableView.refreshControl = UIRefreshControl(frame: .zero)
+        tableView.register(FileCell.self, forCellReuseIdentifier: FileCell.reuseIdentifier)
         tableView.refreshControl?.addTarget(self, action: #selector(refresh), for: .primaryActionTriggered)
+        tableView.pinToSuperview()
+        tableView.delegate = self
+        tableView.dataSource = self
+//        tableView.estimatedRowHeight = 44
+        tableView.rowHeight = 44
         return tableView
     }()
 
-    private lazy var tableDirector = TableDirector(tableView: tableView)
-
-    override func updateViewConstraints() {
-
-        tableView.snp.remakeConstraints { (make) in
-            make.center.width.height.equalToSuperview()
-        }
-
-        super.updateViewConstraints()
-    }
+    var files = FileService.allFiles()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +26,9 @@ final class FilesViewController: BaseViewController<FilesViewModel> {
 
         FileService.copyIfNeeded(file: "HP", fileExtension: "txt")
 
-//        reconfigureTable()
+        view.setNeedsUpdateConstraints()
+
+        reconfigureTable()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -52,17 +48,40 @@ final class FilesViewController: BaseViewController<FilesViewModel> {
             self.tableView.refreshControl?.endRefreshing()
         }
     }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return files.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: FileCell.reuseIdentifier) as! FileCell
+
+        cell.configure(with: FileCellViewModel.init(fileName: files[indexPath.row]))
+
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+
+        let deleteAction = UIContextualAction(style: UIContextualAction.Style.destructive, title: "Delete") { (action, view, closure) in
+            closure(FileService.deleteFile(with: self.files[indexPath.row]))
+        }
+
+        let configuration = UISwipeActionsConfiguration.init(actions: [deleteAction])
+
+        return configuration
+    }
 }
 
 private extension FilesViewController {
     func reconfigureTable() {
-        let rows: [Row] = FileService.allFiles()
-            .map { fileName in
-                return TableRow<FileCell>(item: FileCellViewModel(fileName: fileName))
-                }
-
-        let section = TableSection(onlyRows: rows)
-        tableDirector.replace(withSection: section)
+        files = FileService.allFiles()
+        tableView.reloadData()
     }
 }
 

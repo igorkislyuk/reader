@@ -31,6 +31,18 @@ final class FileService {
         }
     }
 
+    static func deleteFile(with lastPathComponent: String) -> Bool {
+        let path = documentsDirectoryURL.appendingPathComponent(lastPathComponent).path
+        
+        do {
+            try manager.removeItem(atPath: path)
+            return true
+        }
+        catch {
+            return false
+        }
+    }
+
     static func nextDefaultFileName() -> String {
         let allFilesWithDefaultName = allFiles().filter { $0.contains(String.defaultFileName) }
 
