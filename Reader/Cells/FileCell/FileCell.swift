@@ -19,14 +19,6 @@ final class FileCell: UITableViewCell, InitializableView {
 
         fileLabel.pinToSuperview()
     }
-
-//    override func sizeThatFits(_ size: CGSize) -> CGSize {
-//        var size = super.sizeThatFits(size)
-//
-//        size.height = max(44, size.height)
-//
-//        return size
-//    }
 }
 
 extension FileCell: ReuseIdentifiable {

@@ -2,7 +2,6 @@ import UIKit
 import WatchConnectivity
 
 final class FilesViewController: BaseViewController<FilesViewModel>, UITableViewDelegate, UITableViewDataSource {
-
     private(set) lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         self.view.addSubview(tableView)
@@ -12,19 +11,18 @@ final class FilesViewController: BaseViewController<FilesViewModel>, UITableView
         tableView.pinToSuperview()
         tableView.delegate = self
         tableView.dataSource = self
-//        tableView.estimatedRowHeight = 44
         tableView.rowHeight = 44
         return tableView
     }()
 
-    var files = FileService.allFiles()
+    private var files = FileService.allFiles()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         initialLoadView()
 
-        FileService.copyIfNeeded(file: "HP", fileExtension: "txt")
+        FileService.copyIfNeeded(file: .harryPotterFileName, fileExtension: .txtExtension)
 
         view.setNeedsUpdateConstraints()
 
@@ -49,9 +47,7 @@ final class FilesViewController: BaseViewController<FilesViewModel>, UITableView
         }
     }
 
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+    // MARK: - UITableViewDelegate, UITableViewDataSource
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return files.count

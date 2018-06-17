@@ -1,11 +1,6 @@
 import UIKit
 
-protocol BaseViewModel {
-    
-}
-
 class BaseViewController<ViewModel: BaseViewModel>: UIViewController {
-
     let viewModel: ViewModel
 
     init(viewModel: ViewModel) {
@@ -16,5 +11,4 @@ class BaseViewController<ViewModel: BaseViewModel>: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }

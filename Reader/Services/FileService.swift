@@ -1,15 +1,6 @@
 import UIKit
 
-extension String {
-    static let empty = ""
-}
-
-private extension String {
-    static let defaultFileName = "File"
-}
-
 final class FileService {
-
     static let manager = FileManager.default
 
     static var documentsDirectoryURL: URL {
@@ -73,6 +64,4 @@ final class FileService {
             debugPrint("File \(file).\(fileExtension) already copied")
         }
     }
-
 }
-

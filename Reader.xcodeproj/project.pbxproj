@@ -22,7 +22,12 @@
 		A659930420D340D2002C7C43 /* InitializableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659930320D340D2002C7C43 /* InitializableView.swift */; };
 		A659930620D343D4002C7C43 /* ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659930520D343D4002C7C43 /* ReuseIdentifiable.swift */; };
 		A659930720D348C1002C7C43 /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68D825520BE2B0800637660 /* FileService.swift */; };
-		A659930920D34A52002C7C43 /* HP.txt in Resources */ = {isa = PBXBuildFile; fileRef = A6BA31EE20B2E81000FBE03F /* HP.txt */; };
+		A659930920D34A52002C7C43 /* harry-potter.txt in Resources */ = {isa = PBXBuildFile; fileRef = A6BA31EE20B2E81000FBE03F /* harry-potter.txt */; };
+		A659930B20D34AE7002C7C43 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659930A20D34AE7002C7C43 /* BaseViewModel.swift */; };
+		A659930E20D34B6F002C7C43 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659930D20D34B6F002C7C43 /* UIViewController+Ext.swift */; };
+		A659931020D34B94002C7C43 /* UIWindow+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659930F20D34B94002C7C43 /* UIWindow+Ext.swift */; };
+		A659931220D34BB5002C7C43 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659931120D34BB5002C7C43 /* String+Ext.swift */; };
+		A659931420D34BDA002C7C43 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659931320D34BDA002C7C43 /* UIView+Ext.swift */; };
 		A68D824E20BE1AC000637660 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68D824D20BE1AC000637660 /* NavigationService.swift */; };
 		A68D825020BE1E3D00637660 /* FileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68D824F20BE1E3D00637660 /* FileCell.swift */; };
 		A68D825420BE1F1700637660 /* FileCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68D825320BE1F1700637660 /* FileCellViewModel.swift */; };
@@ -30,8 +35,16 @@
 		A68D825820BE32C900637660 /* FilesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68D825720BE32C900637660 /* FilesViewModel.swift */; };
 		A68D825B20BE330B00637660 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68D825A20BE330B00637660 /* BaseViewController.swift */; };
 		A68D825D20BE334F00637660 /* NavigationService+Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68D825C20BE334F00637660 /* NavigationService+Files.swift */; };
+		A69355DE20D72763006F3199 /* alcott-little-261.txt in Resources */ = {isa = PBXBuildFile; fileRef = A69355DD20D72763006F3199 /* alcott-little-261.txt */; };
+		A69355E020D72769006F3199 /* alcott-little-261.txt in Resources */ = {isa = PBXBuildFile; fileRef = A69355DD20D72763006F3199 /* alcott-little-261.txt */; };
+		A69355E120D7282A006F3199 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659931120D34BB5002C7C43 /* String+Ext.swift */; };
+		A69355E620D72834006F3199 /* ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659930520D343D4002C7C43 /* ReuseIdentifiable.swift */; };
+		A69355E720D72834006F3199 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659930A20D34AE7002C7C43 /* BaseViewModel.swift */; };
+		A69355EC20D728E5006F3199 /* ConfigurableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69355EB20D728E5006F3199 /* ConfigurableController.swift */; };
+		A69355F020D72931006F3199 /* Filetypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69355EF20D72931006F3199 /* Filetypes.swift */; };
+		A69355F120D72931006F3199 /* Filetypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69355EF20D72931006F3199 /* Filetypes.swift */; };
 		A6BA31F120B2E8D900FBE03F /* TextRowContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BA31F020B2E8D900FBE03F /* TextRowContoller.swift */; };
-		A6BA31F220B2ED3500FBE03F /* HP.txt in Resources */ = {isa = PBXBuildFile; fileRef = A6BA31EE20B2E81000FBE03F /* HP.txt */; };
+		A6BA31F220B2ED3500FBE03F /* harry-potter.txt in Resources */ = {isa = PBXBuildFile; fileRef = A6BA31EE20B2E81000FBE03F /* harry-potter.txt */; };
 		A6BA31F520B2EFD000FBE03F /* SynchronizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BA31F420B2EFD000FBE03F /* SynchronizationService.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +109,11 @@
 		A652398920A78A7A00DE6F62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A659930320D340D2002C7C43 /* InitializableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializableView.swift; sourceTree = "<group>"; };
 		A659930520D343D4002C7C43 /* ReuseIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiable.swift; sourceTree = "<group>"; };
+		A659930A20D34AE7002C7C43 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		A659930D20D34B6F002C7C43 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		A659930F20D34B94002C7C43 /* UIWindow+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Ext.swift"; sourceTree = "<group>"; };
+		A659931120D34BB5002C7C43 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		A659931320D34BDA002C7C43 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		A68D824D20BE1AC000637660 /* NavigationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
 		A68D824F20BE1E3D00637660 /* FileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCell.swift; sourceTree = "<group>"; };
 		A68D825320BE1F1700637660 /* FileCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCellViewModel.swift; sourceTree = "<group>"; };
@@ -103,7 +121,10 @@
 		A68D825720BE32C900637660 /* FilesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewModel.swift; sourceTree = "<group>"; };
 		A68D825A20BE330B00637660 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A68D825C20BE334F00637660 /* NavigationService+Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationService+Files.swift"; sourceTree = "<group>"; };
-		A6BA31EE20B2E81000FBE03F /* HP.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = HP.txt; sourceTree = "<group>"; };
+		A69355DD20D72763006F3199 /* alcott-little-261.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "alcott-little-261.txt"; sourceTree = "<group>"; };
+		A69355EB20D728E5006F3199 /* ConfigurableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableController.swift; sourceTree = "<group>"; };
+		A69355EF20D72931006F3199 /* Filetypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filetypes.swift; sourceTree = "<group>"; };
+		A6BA31EE20B2E81000FBE03F /* harry-potter.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "harry-potter.txt"; sourceTree = "<group>"; };
 		A6BA31F020B2E8D900FBE03F /* TextRowContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRowContoller.swift; sourceTree = "<group>"; };
 		A6BA31F420B2EFD000FBE03F /* SynchronizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronizationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,7 +181,7 @@
 				A652396020A78A7800DE6F62 /* AppDelegate.swift */,
 				A68D825220BE1E4600637660 /* Cells */,
 				A68D824A20BE19C100637660 /* Controllers */,
-				A68D824C20BE19D900637660 /* Interface */,
+				A659930C20D34AFF002C7C43 /* Extensions */,
 				A659930220D340C8002C7C43 /* Protocols */,
 				A68D824B20BE19CB00637660 /* Resources */,
 				A6BA31F320B2EFC300FBE03F /* Services */,
@@ -181,12 +202,9 @@
 		A652398220A78A7A00DE6F62 /* Reader WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				A652398320A78A7A00DE6F62 /* InterfaceController.swift */,
-				A652398520A78A7A00DE6F62 /* ExtensionDelegate.swift */,
+				A69355F220D72992006F3199 /* Reader */,
 				A652398720A78A7A00DE6F62 /* Assets.xcassets */,
 				A652398920A78A7A00DE6F62 /* Info.plist */,
-				A6BA31F020B2E8D900FBE03F /* TextRowContoller.swift */,
-				A64E1A5B20B85EA9000539B5 /* StorageService.swift */,
 			);
 			path = "Reader WatchKit Extension";
 			sourceTree = "<group>";
@@ -194,10 +212,20 @@
 		A659930220D340C8002C7C43 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				A659930320D340D2002C7C43 /* InitializableView.swift */,
-				A659930520D343D4002C7C43 /* ReuseIdentifiable.swift */,
+				A69355EA20D728C9006F3199 /* Common */,
+				A69355E820D7289D006F3199 /* iOS */,
+				A69355E920D728B0006F3199 /* watchOS */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A659930C20D34AFF002C7C43 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A69355EE20D72911006F3199 /* Common */,
+				A69355ED20D72909006F3199 /* iOS */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A68D824A20BE19C100637660 /* Controllers */ = {
@@ -217,13 +245,6 @@
 				A652396C20A78A7900DE6F62 /* Info.plist */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		A68D824C20BE19D900637660 /* Interface */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interface;
 			sourceTree = "<group>";
 		};
 		A68D825120BE1E4100637660 /* FileCell */ = {
@@ -261,10 +282,66 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		A69355E820D7289D006F3199 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A659930320D340D2002C7C43 /* InitializableView.swift */,
+				A69355EB20D728E5006F3199 /* ConfigurableController.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		A69355E920D728B0006F3199 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = watchOS;
+			sourceTree = "<group>";
+		};
+		A69355EA20D728C9006F3199 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A659930A20D34AE7002C7C43 /* BaseViewModel.swift */,
+				A659930520D343D4002C7C43 /* ReuseIdentifiable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A69355ED20D72909006F3199 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A659931320D34BDA002C7C43 /* UIView+Ext.swift */,
+				A659930D20D34B6F002C7C43 /* UIViewController+Ext.swift */,
+				A659930F20D34B94002C7C43 /* UIWindow+Ext.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		A69355EE20D72911006F3199 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A659931120D34BB5002C7C43 /* String+Ext.swift */,
+				A69355EF20D72931006F3199 /* Filetypes.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A69355F220D72992006F3199 /* Reader */ = {
+			isa = PBXGroup;
+			children = (
+				A652398320A78A7A00DE6F62 /* InterfaceController.swift */,
+				A652398520A78A7A00DE6F62 /* ExtensionDelegate.swift */,
+				A6BA31F020B2E8D900FBE03F /* TextRowContoller.swift */,
+				A64E1A5B20B85EA9000539B5 /* StorageService.swift */,
+			);
+			path = Reader;
+			sourceTree = "<group>";
+		};
 		A6BA31ED20B2E7FC00FBE03F /* Examples */ = {
 			isa = PBXGroup;
 			children = (
-				A6BA31EE20B2E81000FBE03F /* HP.txt */,
+				A6BA31EE20B2E81000FBE03F /* harry-potter.txt */,
+				A69355DD20D72763006F3199 /* alcott-little-261.txt */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -272,9 +349,9 @@
 		A6BA31F320B2EFC300FBE03F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A6BA31F420B2EFD000FBE03F /* SynchronizationService.swift */,
-				A68D824D20BE1AC000637660 /* NavigationService.swift */,
 				A68D825520BE2B0800637660 /* FileService.swift */,
+				A68D824D20BE1AC000637660 /* NavigationService.swift */,
+				A6BA31F420B2EFD000FBE03F /* SynchronizationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -383,9 +460,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6BA31F220B2ED3500FBE03F /* HP.txt in Resources */,
+				A6BA31F220B2ED3500FBE03F /* harry-potter.txt in Resources */,
 				A652396B20A78A7900DE6F62 /* LaunchScreen.storyboard in Resources */,
 				A652396820A78A7900DE6F62 /* Assets.xcassets in Resources */,
+				A69355DE20D72763006F3199 /* alcott-little-261.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,8 +480,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A659930920D34A52002C7C43 /* HP.txt in Resources */,
+				A659930920D34A52002C7C43 /* harry-potter.txt in Resources */,
 				A652398820A78A7A00DE6F62 /* Assets.xcassets in Resources */,
+				A69355E020D72769006F3199 /* alcott-little-261.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,17 +493,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A659931420D34BDA002C7C43 /* UIView+Ext.swift in Sources */,
 				A6BA31F520B2EFD000FBE03F /* SynchronizationService.swift in Sources */,
 				A68D825620BE2B0800637660 /* FileService.swift in Sources */,
 				A652396320A78A7800DE6F62 /* FilesViewController.swift in Sources */,
 				A68D825D20BE334F00637660 /* NavigationService+Files.swift in Sources */,
 				A68D825420BE1F1700637660 /* FileCellViewModel.swift in Sources */,
 				A652396120A78A7800DE6F62 /* AppDelegate.swift in Sources */,
+				A69355EC20D728E5006F3199 /* ConfigurableController.swift in Sources */,
+				A659931020D34B94002C7C43 /* UIWindow+Ext.swift in Sources */,
 				A68D825B20BE330B00637660 /* BaseViewController.swift in Sources */,
 				A68D825020BE1E3D00637660 /* FileCell.swift in Sources */,
 				A68D825820BE32C900637660 /* FilesViewModel.swift in Sources */,
 				A659930420D340D2002C7C43 /* InitializableView.swift in Sources */,
+				A659930E20D34B6F002C7C43 /* UIViewController+Ext.swift in Sources */,
+				A659930B20D34AE7002C7C43 /* BaseViewModel.swift in Sources */,
 				A659930620D343D4002C7C43 /* ReuseIdentifiable.swift in Sources */,
+				A659931220D34BB5002C7C43 /* String+Ext.swift in Sources */,
+				A69355F020D72931006F3199 /* Filetypes.swift in Sources */,
 				A68D824E20BE1AC000637660 /* NavigationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,10 +519,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A69355E120D7282A006F3199 /* String+Ext.swift in Sources */,
+				A69355E620D72834006F3199 /* ReuseIdentifiable.swift in Sources */,
 				A652398620A78A7A00DE6F62 /* ExtensionDelegate.swift in Sources */,
 				A64E1A5C20B85EA9000539B5 /* StorageService.swift in Sources */,
+				A69355E720D72834006F3199 /* BaseViewModel.swift in Sources */,
 				A652398420A78A7A00DE6F62 /* InterfaceController.swift in Sources */,
 				A659930720D348C1002C7C43 /* FileService.swift in Sources */,
+				A69355F120D72931006F3199 /* Filetypes.swift in Sources */,
 				A6BA31F120B2E8D900FBE03F /* TextRowContoller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
