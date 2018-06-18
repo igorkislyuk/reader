@@ -52,7 +52,7 @@
                                 <tableRow identifier="TitleRowController" id="T1x-SE-Vsp" customClass="TitleRowController" customModule="Reader_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="UYS-eA-xFO">
                                         <items>
-                                            <label alignment="left" text="Label" id="zxA-fj-yBl"/>
+                                            <label alignment="left" text="Label" numberOfLines="0" id="zxA-fj-yBl"/>
                                         </items>
                                     </group>
                                     <connections>
@@ -62,6 +62,9 @@
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="table" destination="F3K-GQ-DnW" id="c5J-G9-ibn"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="23" y="-195"/>

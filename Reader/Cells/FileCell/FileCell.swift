@@ -17,14 +17,12 @@ final class FileCell: UITableViewCell, InitializableView {
     override func updateConstraints() {
         defer { super.updateConstraints() }
 
-        fileLabel.pinToSuperview()
+        fileLabel.pinToSuperview(with: UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16))
     }
 }
 
 extension FileCell: ReuseIdentifiable {
-    static var reuseIdentifier: String {
-        return "FileCell"
-    }
+    static let reuseIdentifier = "FileCell"
 }
 
 extension FileCell {
@@ -33,13 +31,16 @@ extension FileCell {
     }
 
     func configureAppearance() {
-        fileLabel.font = UIFont.systemFont(ofSize: 25)
-        fileLabel.textColor = UIColor.black
+        fileLabel.font = .systemFont(ofSize: 24)
+        fileLabel.textColor = .black
+        fileLabel.numberOfLines = 0
     }
 }
 
 extension FileCell {
     func configure(with vm: FileCellViewModel) {
         fileLabel.text = vm.fileName
+
+        setNeedsLayout()
     }
 }

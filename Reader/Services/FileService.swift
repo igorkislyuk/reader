@@ -45,23 +45,23 @@ final class FileService {
         return String.defaultFileName + String(recentNumber + 1)
     }
 
-    static func copyIfNeeded(file: String, fileExtension: String) {
-        guard let url = Bundle.main.url(forResource: "HP", withExtension: "txt") else {
-            debugPrint("No such \(file).\(fileExtension) in Bundle")
+    static func copyFileIfNeeded(name: String, fileExtension: String) {
+        guard let url = Bundle.main.url(forResource: name, withExtension: fileExtension) else {
+            debugPrint("No such \(name).\(fileExtension) in bundle")
             return
         }
 
-        let newUrl = documentsDirectoryURL.appendingPathComponent(file).appendingPathExtension(fileExtension)
+        let newUrl = documentsDirectoryURL.appendingPathComponent(name).appendingPathExtension(fileExtension)
 
         if !manager.fileExists(atPath: newUrl.path) {
             do {
                 try FileManager.default.copyItem(at: url, to: newUrl)
             }
             catch {
-                debugPrint("Error coping \(file).\(fileExtension)", error.localizedDescription)
+                debugPrint("Error coping \(name).\(fileExtension)", error.localizedDescription)
             }
         } else {
-            debugPrint("File \(file).\(fileExtension) already copied")
+            debugPrint("File \(name).\(fileExtension) already copied")
         }
     }
 }

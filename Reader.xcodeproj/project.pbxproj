@@ -22,7 +22,6 @@
 		A659930420D340D2002C7C43 /* InitializableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659930320D340D2002C7C43 /* InitializableView.swift */; };
 		A659930620D343D4002C7C43 /* ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659930520D343D4002C7C43 /* ReuseIdentifiable.swift */; };
 		A659930720D348C1002C7C43 /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68D825520BE2B0800637660 /* FileService.swift */; };
-		A659930920D34A52002C7C43 /* harry-potter.txt in Resources */ = {isa = PBXBuildFile; fileRef = A6BA31EE20B2E81000FBE03F /* harry-potter.txt */; };
 		A659930B20D34AE7002C7C43 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659930A20D34AE7002C7C43 /* BaseViewModel.swift */; };
 		A659930E20D34B6F002C7C43 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659930D20D34B6F002C7C43 /* UIViewController+Ext.swift */; };
 		A659931020D34B94002C7C43 /* UIWindow+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659930F20D34B94002C7C43 /* UIWindow+Ext.swift */; };
@@ -36,7 +35,6 @@
 		A68D825B20BE330B00637660 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68D825A20BE330B00637660 /* BaseViewController.swift */; };
 		A68D825D20BE334F00637660 /* NavigationService+Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68D825C20BE334F00637660 /* NavigationService+Files.swift */; };
 		A69355DE20D72763006F3199 /* little-woman.txt in Resources */ = {isa = PBXBuildFile; fileRef = A69355DD20D72763006F3199 /* little-woman.txt */; };
-		A69355E020D72769006F3199 /* little-woman.txt in Resources */ = {isa = PBXBuildFile; fileRef = A69355DD20D72763006F3199 /* little-woman.txt */; };
 		A69355E120D7282A006F3199 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659931120D34BB5002C7C43 /* String+Ext.swift */; };
 		A69355E620D72834006F3199 /* ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659930520D343D4002C7C43 /* ReuseIdentifiable.swift */; };
 		A69355E720D72834006F3199 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659930A20D34AE7002C7C43 /* BaseViewModel.swift */; };
@@ -49,6 +47,8 @@
 		A6BA31F120B2E8D900FBE03F /* HeaderTextRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BA31F020B2E8D900FBE03F /* HeaderTextRowController.swift */; };
 		A6BA31F220B2ED3500FBE03F /* harry-potter.txt in Resources */ = {isa = PBXBuildFile; fileRef = A6BA31EE20B2E81000FBE03F /* harry-potter.txt */; };
 		A6BA31F520B2EFD000FBE03F /* SynchronizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BA31F420B2EFD000FBE03F /* SynchronizationService.swift */; };
+		A6D34E5A20D735DF00FB73F2 /* little-woman.txt in Resources */ = {isa = PBXBuildFile; fileRef = A69355DD20D72763006F3199 /* little-woman.txt */; };
+		A6D34E5B20D735E100FB73F2 /* harry-potter.txt in Resources */ = {isa = PBXBuildFile; fileRef = A6BA31EE20B2E81000FBE03F /* harry-potter.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,6 +229,7 @@
 			children = (
 				A69355EE20D72911006F3199 /* Common */,
 				A69355ED20D72909006F3199 /* iOS */,
+				A6D34E5520D731D500FB73F2 /* watchOS */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -371,12 +372,19 @@
 		A6BA31F320B2EFC300FBE03F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A64E1A5B20B85EA9000539B5 /* StorageService.swift */,
 				A68D825520BE2B0800637660 /* FileService.swift */,
 				A68D824D20BE1AC000637660 /* NavigationService.swift */,
+				A64E1A5B20B85EA9000539B5 /* StorageService.swift */,
 				A6BA31F420B2EFD000FBE03F /* SynchronizationService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		A6D34E5520D731D500FB73F2 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = watchOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -503,9 +511,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A659930920D34A52002C7C43 /* harry-potter.txt in Resources */,
+				A6D34E5B20D735E100FB73F2 /* harry-potter.txt in Resources */,
 				A652398820A78A7A00DE6F62 /* Assets.xcassets in Resources */,
-				A69355E020D72769006F3199 /* little-woman.txt in Resources */,
+				A6D34E5A20D735DF00FB73F2 /* little-woman.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,8 +8,8 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate {
     func applicationDidFinishLaunching() {
         setupWatchConnectivity()
 
-        FileService.copyIfNeeded(file: .harryPotterFileName, fileExtension: .txtExtension)
-        FileService.copyIfNeeded(file: .littleWomanFileName, fileExtension: .txtExtension)
+        FileService.copyFileIfNeeded(name: .harryPotterFileName, fileExtension: .txtExtension)
+        FileService.copyFileIfNeeded(name: .littleWomanFileName, fileExtension: .txtExtension)
     }
 
     func applicationDidBecomeActive() {

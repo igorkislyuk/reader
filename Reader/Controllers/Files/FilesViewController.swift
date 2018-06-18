@@ -2,18 +2,8 @@ import UIKit
 import WatchConnectivity
 
 final class FilesViewController: BaseViewController<FilesViewModel>, UITableViewDelegate, UITableViewDataSource {
-    private(set) lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .plain)
-        self.view.addSubview(tableView)
-        tableView.refreshControl = UIRefreshControl(frame: .zero)
-        tableView.register(FileCell.self, forCellReuseIdentifier: FileCell.reuseIdentifier)
-        tableView.refreshControl?.addTarget(self, action: #selector(refresh), for: .primaryActionTriggered)
-        tableView.pinToSuperview()
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.rowHeight = 44
-        return tableView
-    }()
+
+    let tableView = UITableView(frame: .zero, style: .plain)
 
     private var files = FileService.allFiles()
 
@@ -22,11 +12,8 @@ final class FilesViewController: BaseViewController<FilesViewModel>, UITableView
 
         initialLoadView()
 
-        FileService.copyIfNeeded(file: .harryPotterFileName, fileExtension: .txtExtension)
-
-        view.setNeedsUpdateConstraints()
-
-        reconfigureTable()
+        FileService.copyFileIfNeeded(name: .harryPotterFileName, fileExtension: .txtExtension)
+        FileService.copyFileIfNeeded(name: .littleWomanFileName, fileExtension: .txtExtension)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -123,9 +110,21 @@ extension FilesViewController: ConfigurableController {
         navigationController?.navigationBar.prefersLargeTitles = true
 
         view.backgroundColor = .white
+
+        tableView.refreshControl = UIRefreshControl(frame: .zero)
+        tableView.register(FileCell.self, forCellReuseIdentifier: FileCell.reuseIdentifier)
+        tableView.refreshControl?.addTarget(self, action: #selector(refresh), for: .primaryActionTriggered)
+
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 44
     }
 
-    func addViews() {}
+    func addViews() {
+        view.addSubview(tableView)
+        tableView.pinToSuperview()
+    }
 
     func bindViews() {}
 
