@@ -1,7 +1,5 @@
 import UIKit
 
-
-
 struct NavigationService {
 
     static let appWindow = AppDelegate.shared.appWindow

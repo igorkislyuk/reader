@@ -51,16 +51,18 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
 private extension AppDelegate {
     func saveFile(url: URL) {
-        NavigationService.presentTextFieldAlert { text in
+        NavigationService.presentTextFieldAlert { [weak self] text in
             var newUrl = FileService.documentsDirectoryURL
 
             let fileName = text?.nilIfEmpty ?? FileService.nextDefaultFileName()
 
             newUrl.appendPathComponent(fileName)
-            newUrl.appendPathExtension("txt")
+            newUrl.appendPathExtension(String.txtExtension)
 
             do {
                 try FileService.manager.copyItem(at: url, to: newUrl)
+
+                self?.session?.transferFile(url, metadata: [.keyFileName: fileName, .keyFileExtension: String.txtExtension])
             }
             catch {
                 debugPrint(error)

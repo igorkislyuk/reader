@@ -8,8 +8,7 @@ final class ExtensionDelegate: NSObject, WKExtensionDelegate {
     func applicationDidFinishLaunching() {
         setupWatchConnectivity()
 
-        FileService.copyFileIfNeeded(name: .harryPotterFileName, fileExtension: .txtExtension)
-        FileService.copyFileIfNeeded(name: .littleWomanFileName, fileExtension: .txtExtension)
+        FileService.saveMockData()
     }
 
     func applicationDidBecomeActive() {
@@ -93,7 +92,8 @@ extension ExtensionDelegate: WCSessionDelegate {
 
     func reloadRootController() {
         DispatchQueue.main.async {
-            WKInterfaceController.reloadRootPageControllers(withNames: ["RootController"], contexts: nil, orientation: .horizontal, pageIndex: 0)
+            WKInterfaceController
+                .reloadRootPageControllers(withNames: [FilesInterfaceController.reuseIdentifier], contexts: nil, orientation: .horizontal, pageIndex: 0)
         }
     }
 
@@ -126,11 +126,33 @@ extension ExtensionDelegate: WCSessionDelegate {
 //        debugPrint(#function)
 //    }
 //
-//    func session(_ session: WCSession, didFinish fileTransfer: WCSessionFileTransfer, error: Error?) {
-//        debugPrint(#function)
-//    }
-//
+    func session(_ session: WCSession, didFinish fileTransfer: WCSessionFileTransfer, error: Error?) {
+        debugPrint(#function)
+
+        guard error == nil else {
+            debugPrint("Error is", error?.localizedDescription ?? "Even without description")
+            return
+        }
+    }
+
     func session(_ session: WCSession, didReceive file: WCSessionFile) {
         debugPrint(#function)
+
+        guard let metadata = file.metadata else {
+            debugPrint("No metadata")
+            return
+        }
+
+        guard let fileName = metadata[String.keyFileName] as? String,
+            let fileExtension = metadata[String.keyFileExtension] as? String else {
+
+                debugPrint("Wrong metadata")
+                return
+        }
+
+        FileService.saveFileFrom(url: file.fileURL, name: fileName, fileExtension: fileExtension)
+
+        // notify to reload
+        reloadRootController()
     }
 }

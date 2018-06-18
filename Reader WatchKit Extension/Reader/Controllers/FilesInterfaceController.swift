@@ -34,3 +34,7 @@ final class FilesInterfaceController: WKInterfaceController {
         }
     }
 }
+
+extension FilesInterfaceController: ReuseIdentifiable {
+    static let reuseIdentifier = "FilesInterfaceController"
+}

@@ -42,10 +42,10 @@
                 </controller>
             </objects>
         </scene>
-        <!--Files Interface Controller-->
+        <!--FilesInterfaceController-->
         <scene sceneID="M58-49-hBv">
             <objects>
-                <controller id="QZr-dW-Jgf" customClass="FilesInterfaceController" customModule="Reader_WatchKit_Extension">
+                <controller identifier="FilesInterfaceController" id="QZr-dW-Jgf" customClass="FilesInterfaceController" customModule="Reader_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="F3K-GQ-DnW">
                             <items>

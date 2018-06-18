@@ -12,14 +12,15 @@ final class FilesViewController: BaseViewController<FilesViewModel>, UITableView
 
         initialLoadView()
 
-        FileService.copyFileIfNeeded(name: .harryPotterFileName, fileExtension: .txtExtension)
-        FileService.copyFileIfNeeded(name: .littleWomanFileName, fileExtension: .txtExtension)
+        FileService.saveMockData()
+        // prepare some data
+        files = FileService.allFiles()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        reconfigureTable()
+//        reconfigureTable()
     }
 
     @objc private func action() {
@@ -112,13 +113,14 @@ extension FilesViewController: ConfigurableController {
         view.backgroundColor = .white
 
         tableView.refreshControl = UIRefreshControl(frame: .zero)
-        tableView.register(FileCell.self, forCellReuseIdentifier: FileCell.reuseIdentifier)
         tableView.refreshControl?.addTarget(self, action: #selector(refresh), for: .primaryActionTriggered)
 
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
+
+        tableView.register(FileCell.self, forCellReuseIdentifier: FileCell.reuseIdentifier)
     }
 
     func addViews() {

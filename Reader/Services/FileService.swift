@@ -22,6 +22,21 @@ final class FileService {
         }
     }
 
+    static func saveFileFrom(url: URL, name: String, fileExtension: String) {
+        let newUrl = documentsDirectoryURL.appendingPathComponent(name).appendingPathExtension(fileExtension)
+
+        if !manager.fileExists(atPath: newUrl.path) {
+            do {
+                try manager.copyItem(at: url, to: newUrl)
+            }
+            catch {
+                debugPrint("Error coping \(name).\(fileExtension)", error.localizedDescription)
+            }
+        } else {
+            debugPrint("File \(name).\(fileExtension) already copied")
+        }
+    }
+
     static func deleteFile(with lastPathComponent: String) -> Bool {
         let path = documentsDirectoryURL.appendingPathComponent(lastPathComponent).path
         
@@ -45,7 +60,7 @@ final class FileService {
         return String.defaultFileName + String(recentNumber + 1)
     }
 
-    static func copyFileIfNeeded(name: String, fileExtension: String) {
+    static func copyFileIfNeededFromBundleWith(name: String, fileExtension: String) {
         guard let url = Bundle.main.url(forResource: name, withExtension: fileExtension) else {
             debugPrint("No such \(name).\(fileExtension) in bundle")
             return
@@ -55,7 +70,7 @@ final class FileService {
 
         if !manager.fileExists(atPath: newUrl.path) {
             do {
-                try FileManager.default.copyItem(at: url, to: newUrl)
+                try manager.copyItem(at: url, to: newUrl)
             }
             catch {
                 debugPrint("Error coping \(name).\(fileExtension)", error.localizedDescription)
@@ -63,5 +78,12 @@ final class FileService {
         } else {
             debugPrint("File \(name).\(fileExtension) already copied")
         }
+    }
+}
+
+extension FileService {
+    static func saveMockData() {
+        FileService.copyFileIfNeededFromBundleWith(name: .harryPotterFileName, fileExtension: .txtExtension)
+        FileService.copyFileIfNeededFromBundleWith(name: .littleWomanFileName, fileExtension: .txtExtension)
     }
 }

@@ -12,6 +12,11 @@ extension String {
 }
 
 extension String {
+    static let keyFileName = "fileName"
+    static let keyFileExtension = "fileExtension"
+}
+
+extension String {
     var nilIfEmpty: String? {
         return isEmpty ? nil : self
     }
