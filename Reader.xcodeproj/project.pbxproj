@@ -35,15 +35,18 @@
 		A68D825820BE32C900637660 /* FilesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68D825720BE32C900637660 /* FilesViewModel.swift */; };
 		A68D825B20BE330B00637660 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68D825A20BE330B00637660 /* BaseViewController.swift */; };
 		A68D825D20BE334F00637660 /* NavigationService+Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68D825C20BE334F00637660 /* NavigationService+Files.swift */; };
-		A69355DE20D72763006F3199 /* alcott-little-261.txt in Resources */ = {isa = PBXBuildFile; fileRef = A69355DD20D72763006F3199 /* alcott-little-261.txt */; };
-		A69355E020D72769006F3199 /* alcott-little-261.txt in Resources */ = {isa = PBXBuildFile; fileRef = A69355DD20D72763006F3199 /* alcott-little-261.txt */; };
+		A69355DE20D72763006F3199 /* little-woman.txt in Resources */ = {isa = PBXBuildFile; fileRef = A69355DD20D72763006F3199 /* little-woman.txt */; };
+		A69355E020D72769006F3199 /* little-woman.txt in Resources */ = {isa = PBXBuildFile; fileRef = A69355DD20D72763006F3199 /* little-woman.txt */; };
 		A69355E120D7282A006F3199 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659931120D34BB5002C7C43 /* String+Ext.swift */; };
 		A69355E620D72834006F3199 /* ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659930520D343D4002C7C43 /* ReuseIdentifiable.swift */; };
 		A69355E720D72834006F3199 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A659930A20D34AE7002C7C43 /* BaseViewModel.swift */; };
 		A69355EC20D728E5006F3199 /* ConfigurableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69355EB20D728E5006F3199 /* ConfigurableController.swift */; };
 		A69355F020D72931006F3199 /* Filetypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69355EF20D72931006F3199 /* Filetypes.swift */; };
 		A69355F120D72931006F3199 /* Filetypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69355EF20D72931006F3199 /* Filetypes.swift */; };
-		A6BA31F120B2E8D900FBE03F /* TextRowContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BA31F020B2E8D900FBE03F /* TextRowContoller.swift */; };
+		A69355F420D72BBA006F3199 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64E1A5B20B85EA9000539B5 /* StorageService.swift */; };
+		A69355F720D72C9E006F3199 /* FilesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69355F620D72C9E006F3199 /* FilesInterfaceController.swift */; };
+		A69355F920D72CE3006F3199 /* TitleRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69355F820D72CE3006F3199 /* TitleRowController.swift */; };
+		A6BA31F120B2E8D900FBE03F /* HeaderTextRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BA31F020B2E8D900FBE03F /* HeaderTextRowController.swift */; };
 		A6BA31F220B2ED3500FBE03F /* harry-potter.txt in Resources */ = {isa = PBXBuildFile; fileRef = A6BA31EE20B2E81000FBE03F /* harry-potter.txt */; };
 		A6BA31F520B2EFD000FBE03F /* SynchronizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BA31F420B2EFD000FBE03F /* SynchronizationService.swift */; };
 /* End PBXBuildFile section */
@@ -121,11 +124,13 @@
 		A68D825720BE32C900637660 /* FilesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewModel.swift; sourceTree = "<group>"; };
 		A68D825A20BE330B00637660 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A68D825C20BE334F00637660 /* NavigationService+Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationService+Files.swift"; sourceTree = "<group>"; };
-		A69355DD20D72763006F3199 /* alcott-little-261.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "alcott-little-261.txt"; sourceTree = "<group>"; };
+		A69355DD20D72763006F3199 /* little-woman.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "little-woman.txt"; sourceTree = "<group>"; };
 		A69355EB20D728E5006F3199 /* ConfigurableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableController.swift; sourceTree = "<group>"; };
 		A69355EF20D72931006F3199 /* Filetypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filetypes.swift; sourceTree = "<group>"; };
+		A69355F620D72C9E006F3199 /* FilesInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesInterfaceController.swift; sourceTree = "<group>"; };
+		A69355F820D72CE3006F3199 /* TitleRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleRowController.swift; sourceTree = "<group>"; };
 		A6BA31EE20B2E81000FBE03F /* harry-potter.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "harry-potter.txt"; sourceTree = "<group>"; };
-		A6BA31F020B2E8D900FBE03F /* TextRowContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRowContoller.swift; sourceTree = "<group>"; };
+		A6BA31F020B2E8D900FBE03F /* HeaderTextRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTextRowController.swift; sourceTree = "<group>"; };
 		A6BA31F420B2EFD000FBE03F /* SynchronizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronizationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -329,19 +334,36 @@
 		A69355F220D72992006F3199 /* Reader */ = {
 			isa = PBXGroup;
 			children = (
-				A652398320A78A7A00DE6F62 /* InterfaceController.swift */,
+				A69355F520D72BE5006F3199 /* Controllers */,
 				A652398520A78A7A00DE6F62 /* ExtensionDelegate.swift */,
-				A6BA31F020B2E8D900FBE03F /* TextRowContoller.swift */,
-				A64E1A5B20B85EA9000539B5 /* StorageService.swift */,
+				A69355F320D72BA9006F3199 /* Row */,
 			);
 			path = Reader;
+			sourceTree = "<group>";
+		};
+		A69355F320D72BA9006F3199 /* Row */ = {
+			isa = PBXGroup;
+			children = (
+				A6BA31F020B2E8D900FBE03F /* HeaderTextRowController.swift */,
+				A69355F820D72CE3006F3199 /* TitleRowController.swift */,
+			);
+			path = Row;
+			sourceTree = "<group>";
+		};
+		A69355F520D72BE5006F3199 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A652398320A78A7A00DE6F62 /* InterfaceController.swift */,
+				A69355F620D72C9E006F3199 /* FilesInterfaceController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		A6BA31ED20B2E7FC00FBE03F /* Examples */ = {
 			isa = PBXGroup;
 			children = (
 				A6BA31EE20B2E81000FBE03F /* harry-potter.txt */,
-				A69355DD20D72763006F3199 /* alcott-little-261.txt */,
+				A69355DD20D72763006F3199 /* little-woman.txt */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -349,6 +371,7 @@
 		A6BA31F320B2EFC300FBE03F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A64E1A5B20B85EA9000539B5 /* StorageService.swift */,
 				A68D825520BE2B0800637660 /* FileService.swift */,
 				A68D824D20BE1AC000637660 /* NavigationService.swift */,
 				A6BA31F420B2EFD000FBE03F /* SynchronizationService.swift */,
@@ -463,7 +486,7 @@
 				A6BA31F220B2ED3500FBE03F /* harry-potter.txt in Resources */,
 				A652396B20A78A7900DE6F62 /* LaunchScreen.storyboard in Resources */,
 				A652396820A78A7900DE6F62 /* Assets.xcassets in Resources */,
-				A69355DE20D72763006F3199 /* alcott-little-261.txt in Resources */,
+				A69355DE20D72763006F3199 /* little-woman.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +505,7 @@
 			files = (
 				A659930920D34A52002C7C43 /* harry-potter.txt in Resources */,
 				A652398820A78A7A00DE6F62 /* Assets.xcassets in Resources */,
-				A69355E020D72769006F3199 /* alcott-little-261.txt in Resources */,
+				A69355E020D72769006F3199 /* little-woman.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +521,7 @@
 				A68D825620BE2B0800637660 /* FileService.swift in Sources */,
 				A652396320A78A7800DE6F62 /* FilesViewController.swift in Sources */,
 				A68D825D20BE334F00637660 /* NavigationService+Files.swift in Sources */,
+				A69355F420D72BBA006F3199 /* StorageService.swift in Sources */,
 				A68D825420BE1F1700637660 /* FileCellViewModel.swift in Sources */,
 				A652396120A78A7800DE6F62 /* AppDelegate.swift in Sources */,
 				A69355EC20D728E5006F3199 /* ConfigurableController.swift in Sources */,
@@ -526,8 +550,10 @@
 				A69355E720D72834006F3199 /* BaseViewModel.swift in Sources */,
 				A652398420A78A7A00DE6F62 /* InterfaceController.swift in Sources */,
 				A659930720D348C1002C7C43 /* FileService.swift in Sources */,
+				A69355F720D72C9E006F3199 /* FilesInterfaceController.swift in Sources */,
 				A69355F120D72931006F3199 /* Filetypes.swift in Sources */,
-				A6BA31F120B2E8D900FBE03F /* TextRowContoller.swift in Sources */,
+				A69355F920D72CE3006F3199 /* TitleRowController.swift in Sources */,
+				A6BA31F120B2E8D900FBE03F /* HeaderTextRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

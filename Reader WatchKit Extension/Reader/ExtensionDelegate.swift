@@ -1,25 +1,15 @@
-//
-//  ExtensionDelegate.swift
-//  Reader WatchKit Extension
-//
-//  Created by Igor Kislyuk on 12/05/2018.
-//  Copyright © 2018 Igor Kislyuk. All rights reserved.
-//
-
 import WatchKit
 import WatchConnectivity
 
-class ExtensionDelegate: NSObject, WKExtensionDelegate {
+final class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     var session: WCSession?
 
     func applicationDidFinishLaunching() {
-
         setupWatchConnectivity()
 
-        FileService.copyIfNeeded(file: "HP", fileExtension: "txt")
-
-
+        FileService.copyIfNeeded(file: .harryPotterFileName, fileExtension: .txtExtension)
+        FileService.copyIfNeeded(file: .littleWomanFileName, fileExtension: .txtExtension)
     }
 
     func applicationDidBecomeActive() {
@@ -122,8 +112,6 @@ extension ExtensionDelegate: WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessageData messageData: Data) {
         debugPrint(#function)
         // convert to string
-
-        
     }
 //
 //    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
@@ -143,8 +131,6 @@ extension ExtensionDelegate: WCSessionDelegate {
 //    }
 //
     func session(_ session: WCSession, didReceive file: WCSessionFile) {
-        
         debugPrint(#function)
     }
-
 }

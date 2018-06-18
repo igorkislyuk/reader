@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14269.12" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14269.12" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QZr-dW-Jgf">
     <device id="watch42" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -16,7 +16,7 @@
                     <items>
                         <table alignment="left" id="L8r-X3-Agu">
                             <items>
-                                <tableRow identifier="TextRowController" selectable="NO" id="FaG-ri-Umx" customClass="TextRowController" customModule="Reader_WatchKit_Extension">
+                                <tableRow identifier="TextRowController" selectable="NO" id="FaG-ri-Umx" customClass="HeaderTextRowController" customModule="Reader_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="rmL-g3-Y1e">
                                         <items>
                                             <label alignment="left" text="Header" textAlignment="left" id="C0t-SI-PCu"/>
@@ -41,6 +41,30 @@
                     </connections>
                 </controller>
             </objects>
+        </scene>
+        <!--Files Interface Controller-->
+        <scene sceneID="M58-49-hBv">
+            <objects>
+                <controller id="QZr-dW-Jgf" customClass="FilesInterfaceController" customModule="Reader_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="F3K-GQ-DnW">
+                            <items>
+                                <tableRow identifier="TitleRowController" id="T1x-SE-Vsp" customClass="TitleRowController" customModule="Reader_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="UYS-eA-xFO">
+                                        <items>
+                                            <label alignment="left" text="Label" id="zxA-fj-yBl"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="zxA-fj-yBl" id="Azn-0e-FkY"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="23" y="-195"/>
         </scene>
     </scenes>
 </document>

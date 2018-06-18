@@ -2,7 +2,6 @@ import WatchKit
 import Foundation
 
 final class InterfaceController: WKInterfaceController {
-
     @IBOutlet private weak var table: WKInterfaceTable!
 
     override func awake(withContext context: Any?) {
@@ -19,7 +18,7 @@ final class InterfaceController: WKInterfaceController {
         table.setNumberOfRows(files.count, withRowType: "TextRowController")
 
         files.enumerated().forEach { index, string in
-            if let controller = table.rowController(at: index) as? TextRowController {
+            if let controller = table.rowController(at: index) as? HeaderTextRowController {
                 controller.textLabel?.setText(string)
             }
         }
